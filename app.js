@@ -71,4 +71,5 @@ app.get("/getkeys", function (req, res){
     res.json(Object.fromEntries([...urls]))
 })
 
-app.listen(3000)
+app.listen(3000, console.log("Сервер доступен по адресу: 127.0.0.1:3000")
+)
