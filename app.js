@@ -2,22 +2,13 @@ const axios = require('axios');
 const express = require("express")
 const cors = require('cors')
 
-
 const app = express()
 const jsonParser = express.json()
 
 app.use(cors())
 app.use(express.static("static"));
 
-
-// const urls = {
-//     "одежда" : ["https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B5%D0%B6%D0%B4%D0%B0", "https://www.kant.ru/catalog/clothes/", "https://www.ozon.ru/category/zhenskaya-odezhda-7501/"],
-//     "рецепт" : ["https://eda.ru/recepty", "https://1000.menu/", "https://www.gastronom.ru/recipe"],
-//     "спорт" : ["https://www.sports.ru/", "https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82", "https://news.sportbox.ru/"]
-// }
-
 const urls = new Map();
-
 urls.set("одежда", ["https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B5%D0%B6%D0%B4%D0%B0", "https://www.kant.ru/catalog/clothes/", "https://incity.ru/incity/"])
 urls.set("рецепт", ["https://vkuso.ru/", "https://1000.menu/", "https://www.gastronom.ru/recipe"])
 urls.set("спорт", ["https://www.sports.ru/", "https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%BE%D1%80%D1%82", "https://sportrbc.ru/"])
@@ -55,7 +46,6 @@ app.post("/download",jsonParser, function (req, res){
 
 
 })
-
 
 app.get("/loaded", function (req, res){
     res.sendFile(__dirname + "/public/loaded.html")

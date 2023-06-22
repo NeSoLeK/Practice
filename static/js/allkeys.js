@@ -21,11 +21,11 @@ function getAllKeys(){
         for(let key in recievedKeys) {
             for (let key1 in recievedKeys[key]) {
                 table += `
+
                     <tr>
                           <td>${key}</td>
                           <td>${recievedKeys[key][key1]}</td>
                     </tr>
-  
                 
                 `
                 console.log(recievedKeys[key][key1])
@@ -34,8 +34,10 @@ function getAllKeys(){
 
 
         table += `
+
             </tbody>
-            </table>
+        </table>
+        
 `
         wrapper.innerHTML += table
 

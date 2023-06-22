@@ -1,7 +1,3 @@
-
-
-
-
 function sendLink(link){
 
     if(!localStorage.getItem(link)){
