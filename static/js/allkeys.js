@@ -4,18 +4,16 @@ function getAllKeys(){
     request.open("GET", "/getkeys", true)
     request.addEventListener("load", function () {
         let recievedKeys = JSON.parse(request.response)
-        // console.log(recievedKeys)
         let wrapper = document.getElementById("wrapper")
         let table = `
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">Ключ</th>
-                            <th scope="col">Ссылка</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Ключ</th>
+                        <th scope="col">Ссылка</th>
+                    </tr>
+                </thead>
+                <tbody>
 `
 
         for(let key in recievedKeys) {
@@ -34,10 +32,8 @@ function getAllKeys(){
 
 
         table += `
-
             </tbody>
-        </table>
-        
+        </table>  
 `
         wrapper.innerHTML += table
 

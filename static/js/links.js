@@ -22,7 +22,6 @@ function sendLink(link){
             request.send(search)
         }
 
-
     else {
         let doc = document.getElementById(link).contentWindow.document;
         doc.open();
@@ -30,5 +29,3 @@ function sendLink(link){
         doc.close();
     }
 }
-
-// onclick="sendLink(\`${element}\`)"

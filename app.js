@@ -17,7 +17,6 @@ app.get("/", function (req, res){
     res.sendFile(__dirname + "/index.html")
 
 })
-
 app.post("/search", jsonParser, function (req, res){
     if(!req.body) return res.sendStatus(400)
 
@@ -25,7 +24,6 @@ app.post("/search", jsonParser, function (req, res){
 
 
 })
-
 app.post("/download",jsonParser, function (req, res){
 
 
@@ -46,7 +44,6 @@ app.post("/download",jsonParser, function (req, res){
 
 
 })
-
 app.get("/loaded", function (req, res){
     res.sendFile(__dirname + "/public/loaded.html")
 })
