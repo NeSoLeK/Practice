@@ -72,7 +72,7 @@ JavaScript/Node.js
 Установите зависимости и запустите сервер.
 
 ```sh
-cd practice
+cd Practice
 npm i
 node app.js
 ```
