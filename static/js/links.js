@@ -1,7 +1,6 @@
 function sendLink(link){
 
     if(!localStorage.getItem(link)){
-        console.log("НЕТ В ПАМЯТИ!")
 
             let request = new XMLHttpRequest();
             let search = JSON.stringify({link: link})
